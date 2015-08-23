@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="GestionCommerciale.DomainModel.Entities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="gcdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -412,19 +412,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Measure_Product">
-          <End Role="Products" Type="Self.Products" Multiplicity="1" />
-          <End Role="Measure" Type="Self.Measure" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Products">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="Measure">
-              <PropertyRef Name="Products_ProductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Measure_ProductMeasure">
+        <Association Name="FK_Measure_ProductMeasures">
           <End Role="ProductMeasures" Type="Self.ProductMeasures" Multiplicity="1" />
           <End Role="Measure" Type="Self.Measure" Multiplicity="*" />
           <ReferentialConstraint>
@@ -433,6 +421,18 @@
             </Principal>
             <Dependent Role="Measure">
               <PropertyRef Name="ProductMeasures_ProMeasureID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Measure_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="Measure" Type="Self.Measure" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Measure">
+              <PropertyRef Name="Products_ProductID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -570,7 +570,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_State_Product">
+        <Association Name="FK_State_Products">
           <End Role="Products" Type="Self.Products" Multiplicity="1" />
           <End Role="State" Type="Self.State" Multiplicity="*" />
           <ReferentialConstraint>
@@ -582,7 +582,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_State_ProductState">
+        <Association Name="FK_State_ProductStates">
           <End Role="ProductStates" Type="Self.ProductStates" Multiplicity="1" />
           <End Role="State" Type="Self.State" Multiplicity="*" />
           <ReferentialConstraint>
@@ -654,7 +654,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="GestionCommercialeDomainModelEntitiesStoreContainer">
+        <EntityContainer Name="gcdbModelStoreContainer">
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DatabaseLogs" EntityType="Self.DatabaseLogs" Schema="dbo" store:Type="Tables" />
@@ -698,12 +698,12 @@
             <End Role="TVAs" EntitySet="TVAs" />
             <End Role="Factures" EntitySet="Factures" />
           </AssociationSet>
-          <AssociationSet Name="FK_Measure_Product" Association="Self.FK_Measure_Product">
-            <End Role="Products" EntitySet="Products" />
+          <AssociationSet Name="FK_Measure_ProductMeasures" Association="Self.FK_Measure_ProductMeasures">
+            <End Role="ProductMeasures" EntitySet="ProductMeasures" />
             <End Role="Measure" EntitySet="Measure" />
           </AssociationSet>
-          <AssociationSet Name="FK_Measure_ProductMeasure" Association="Self.FK_Measure_ProductMeasure">
-            <End Role="ProductMeasures" EntitySet="ProductMeasures" />
+          <AssociationSet Name="FK_Measure_Products" Association="Self.FK_Measure_Products">
+            <End Role="Products" EntitySet="Products" />
             <End Role="Measure" EntitySet="Measure" />
           </AssociationSet>
           <AssociationSet Name="FK_OrderDetails_Orders" Association="Self.FK_OrderDetails_Orders">
@@ -750,11 +750,11 @@
             <End Role="Employees" EntitySet="Employees" />
             <End Role="Settings" EntitySet="Settings" />
           </AssociationSet>
-          <AssociationSet Name="FK_State_Product" Association="Self.FK_State_Product">
+          <AssociationSet Name="FK_State_Products" Association="Self.FK_State_Products">
             <End Role="Products" EntitySet="Products" />
             <End Role="State" EntitySet="State" />
           </AssociationSet>
-          <AssociationSet Name="FK_State_ProductState" Association="Self.FK_State_ProductState">
+          <AssociationSet Name="FK_State_ProductStates" Association="Self.FK_State_ProductStates">
             <End Role="ProductStates" EntitySet="ProductStates" />
             <End Role="State" EntitySet="State" />
           </AssociationSet>
@@ -783,7 +783,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="GestionCommerciale.DomainModel.Entities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="gcdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -1416,8 +1416,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="Measure">
-          <End Role="Products" Type="Self.Product" Multiplicity="*" />
           <End Role="ProductMeasures" Type="Self.ProductMeasure" Multiplicity="*" />
+          <End Role="Products" Type="Self.Product" Multiplicity="*" />
         </Association>
         <Association Name="State">
           <End Role="Products" Type="Self.Product" Multiplicity="*" />
@@ -1530,8 +1530,8 @@
             <End Role="StockStores" EntitySet="StockStores" />
           </AssociationSet>
           <AssociationSet Name="Measure" Association="Self.Measure">
-            <End Role="Products" EntitySet="Products" />
             <End Role="ProductMeasures" EntitySet="ProductMeasures" />
+            <End Role="Products" EntitySet="Products" />
           </AssociationSet>
           <AssociationSet Name="State" Association="Self.State">
             <End Role="Products" EntitySet="Products" />
@@ -1543,9 +1543,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="GestionCommercialeDomainModelEntitiesStoreContainer" CdmEntityContainer="GcdbEntities">
+        <EntityContainerMapping StorageEntityContainer="gcdbModelStoreContainer" CdmEntityContainer="GcdbEntities">
           <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Category">
+            <EntityTypeMapping TypeName="gcdbModel.Category">
               <MappingFragment StoreEntitySet="Categories">
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
@@ -1555,7 +1555,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Customers">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Customer">
+            <EntityTypeMapping TypeName="gcdbModel.Customer">
               <MappingFragment StoreEntitySet="Customers">
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1581,7 +1581,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DatabaseLogs">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.DatabaseLog">
+            <EntityTypeMapping TypeName="gcdbModel.DatabaseLog">
               <MappingFragment StoreEntitySet="DatabaseLogs">
                 <ScalarProperty Name="DatabaseLogID" ColumnName="DatabaseLogID" />
                 <ScalarProperty Name="PostTime" ColumnName="PostTime" />
@@ -1595,7 +1595,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Employees">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Employee">
+            <EntityTypeMapping TypeName="gcdbModel.Employee">
               <MappingFragment StoreEntitySet="Employees">
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="EmployeeLastname" ColumnName="EmployeeLastname" />
@@ -1623,7 +1623,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Factures">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Facture">
+            <EntityTypeMapping TypeName="gcdbModel.Facture">
               <MappingFragment StoreEntitySet="Factures">
                 <ScalarProperty Name="FactureID" ColumnName="FactureID" />
                 <ScalarProperty Name="OrdresID" ColumnName="OrdresID" />
@@ -1640,7 +1640,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrderDetails">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.OrderDetail">
+            <EntityTypeMapping TypeName="gcdbModel.OrderDetail">
               <MappingFragment StoreEntitySet="OrderDetails">
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -1653,7 +1653,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Order">
+            <EntityTypeMapping TypeName="gcdbModel.Order">
               <MappingFragment StoreEntitySet="Orders">
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
@@ -1672,7 +1672,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Passwords">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Password">
+            <EntityTypeMapping TypeName="gcdbModel.Password">
               <MappingFragment StoreEntitySet="Passwords">
                 <ScalarProperty Name="LoginID" ColumnName="LoginID" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
@@ -1683,7 +1683,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductMeasures">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.ProductMeasure">
+            <EntityTypeMapping TypeName="gcdbModel.ProductMeasure">
               <MappingFragment StoreEntitySet="ProductMeasures">
                 <ScalarProperty Name="ProMeasureID" ColumnName="ProMeasureID" />
                 <ScalarProperty Name="ProMeasureType" ColumnName="ProMeasureType" />
@@ -1693,7 +1693,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Product">
+            <EntityTypeMapping TypeName="gcdbModel.Product">
               <MappingFragment StoreEntitySet="Products">
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
@@ -1717,7 +1717,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductStates">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.ProductState">
+            <EntityTypeMapping TypeName="gcdbModel.ProductState">
               <MappingFragment StoreEntitySet="ProductStates">
                 <ScalarProperty Name="PROSTATID" ColumnName="PROSTATID" />
                 <ScalarProperty Name="PROSTATNAME" ColumnName="PROSTATNAME" />
@@ -1725,7 +1725,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Providers">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Provider">
+            <EntityTypeMapping TypeName="gcdbModel.Provider">
               <MappingFragment StoreEntitySet="Providers">
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1749,7 +1749,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Purchases">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Purchase">
+            <EntityTypeMapping TypeName="gcdbModel.Purchase">
               <MappingFragment StoreEntitySet="Purchases">
                 <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
@@ -1773,7 +1773,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PurchaseStores">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.PurchaseStore">
+            <EntityTypeMapping TypeName="gcdbModel.PurchaseStore">
               <MappingFragment StoreEntitySet="PurchaseStores">
                 <ScalarProperty Name="PurchaseStoreID" ColumnName="PurchaseStoreID" />
                 <ScalarProperty Name="PurchaseID" ColumnName="PurchaseID" />
@@ -1794,7 +1794,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Settings">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Setting">
+            <EntityTypeMapping TypeName="gcdbModel.Setting">
               <MappingFragment StoreEntitySet="Settings">
                 <ScalarProperty Name="SettingsID" ColumnName="SettingsID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1822,7 +1822,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Stocks">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Stock">
+            <EntityTypeMapping TypeName="gcdbModel.Stock">
               <MappingFragment StoreEntitySet="Stocks">
                 <ScalarProperty Name="StockID" ColumnName="StockID" />
                 <ScalarProperty Name="StockName" ColumnName="StockName" />
@@ -1831,7 +1831,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="StockStores">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.StockStore">
+            <EntityTypeMapping TypeName="gcdbModel.StockStore">
               <MappingFragment StoreEntitySet="StockStores">
                 <ScalarProperty Name="StockStoreID" ColumnName="StockStoreID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -1855,7 +1855,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SubCategories">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.SubCategory">
+            <EntityTypeMapping TypeName="gcdbModel.SubCategory">
               <MappingFragment StoreEntitySet="SubCategories">
                 <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
@@ -1865,7 +1865,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.sysdiagram">
+            <EntityTypeMapping TypeName="gcdbModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -1876,7 +1876,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Telephones">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.Telephone">
+            <EntityTypeMapping TypeName="gcdbModel.Telephone">
               <MappingFragment StoreEntitySet="Telephones">
                 <ScalarProperty Name="TELEPHONEID" ColumnName="TELEPHONEID" />
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
@@ -1887,7 +1887,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TVAs">
-            <EntityTypeMapping TypeName="GestionCommerciale.DomainModel.Entities.TVA">
+            <EntityTypeMapping TypeName="gcdbModel.TVA">
               <MappingFragment StoreEntitySet="TVAs">
                 <ScalarProperty Name="TVAID" ColumnName="TVAID" />
                 <ScalarProperty Name="TauxTVA" ColumnName="TauxTVA" />
@@ -1895,15 +1895,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="Measure" TypeName="GestionCommerciale.DomainModel.Entities.Measure" StoreEntitySet="Measure">
-            <EndProperty Name="Products">
-              <ScalarProperty Name="ProductID" ColumnName="Products_ProductID" />
-            </EndProperty>
+          <AssociationSetMapping Name="Measure" TypeName="gcdbModel.Measure" StoreEntitySet="Measure">
             <EndProperty Name="ProductMeasures">
               <ScalarProperty Name="ProMeasureID" ColumnName="ProductMeasures_ProMeasureID" />
             </EndProperty>
+            <EndProperty Name="Products">
+              <ScalarProperty Name="ProductID" ColumnName="Products_ProductID" />
+            </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="State" TypeName="GestionCommerciale.DomainModel.Entities.State" StoreEntitySet="State">
+          <AssociationSetMapping Name="State" TypeName="gcdbModel.State" StoreEntitySet="State">
             <EndProperty Name="Products">
               <ScalarProperty Name="ProductID" ColumnName="Products_ProductID" />
             </EndProperty>
