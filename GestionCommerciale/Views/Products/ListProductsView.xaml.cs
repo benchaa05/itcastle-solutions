@@ -3,22 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using GestionCommerciale.DomainModel.Entities;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Editors;
-using DevExpress.Xpf.Grid;
-using GestionCommerciale.Helpers;
-using GestionCommerciale.Views.CategoryFolder;
-using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Entities;
 using GestionCommerciale.DomainModel.Validator;
+using GestionCommerciale.Helpers;
 
-namespace GestionCommerciale.Views.ProductFolder
+namespace GestionCommerciale.Views.Products
 {
     /// <summary>
     /// Interaction logic for ListSuppliersView.xaml

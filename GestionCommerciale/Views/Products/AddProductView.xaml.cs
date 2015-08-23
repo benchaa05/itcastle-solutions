@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -7,12 +6,11 @@ using System.Windows.Media.Animation;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Editors;
 using DevExpress.Xpf.LayoutControl;
-using GestionCommerciale.Views.CategoryFolder;
-using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
-using Categorys = GestionCommerciale.DomainModel.Entities.Category;
+using GestionCommerciale.Views.CategoryFolder;
+using GestionCommerciale.Views.Mesures;
 
-namespace GestionCommerciale.Views.ProductFolder
+namespace GestionCommerciale.Views.Products
 {
     /// <summary>
     /// Interaction logic for AddCustomerView.xaml

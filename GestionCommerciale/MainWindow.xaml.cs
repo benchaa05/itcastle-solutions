@@ -2,15 +2,15 @@
 using System.Windows;
 using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.Helpers;
-using GestionCommerciale.Views.CustomerFolder;
-using GestionCommerciale.Views.EmployeeFolder;
-using GestionCommerciale.Views.InvoiceFolder;
-using GestionCommerciale.Views.ProductFolder;
-using GestionCommerciale.Views.PurchaseFolder;
+using GestionCommerciale.Views.Customers;
+using GestionCommerciale.Views.Employees;
+using GestionCommerciale.Views.Invoices;
+using GestionCommerciale.Views.Products;
+using GestionCommerciale.Views.Purchases;
 using GestionCommerciale.Views.SaleFolder;
-using GestionCommerciale.Views.StockFolder;
-using GestionCommerciale.Views.SupplierFolder;
-using MahApps.Metro.Controls;
+using GestionCommerciale.Views.Sales;
+using GestionCommerciale.Views.Stocks;
+using GestionCommerciale.Views.Suppliers;
 
 namespace GestionCommerciale
 {

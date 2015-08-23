@@ -8,20 +8,19 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using GestionCommerciale.DomainModel.Entities;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Editors;
 using DevExpress.Xpf.Grid;
 using DevExpress.Xpf.LayoutControl;
-using GestionCommerciale.Helpers;
-using GestionCommerciale.Views.ProductFolder;
-using GestionCommerciale.Views.SupplierFolder;
-using GestionCommerciale.Views.TVAFolder;
-using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Entities;
 using GestionCommerciale.DomainModel.Validator;
+using GestionCommerciale.Helpers;
+using GestionCommerciale.Views.Products;
+using GestionCommerciale.Views.Suppliers;
+using GestionCommerciale.Views.TVAs;
 
-namespace GestionCommerciale.Views.PurchaseFolder
+namespace GestionCommerciale.Views.Purchases
 {
     /// <summary>
     /// Interaction logic for AddSale.xaml

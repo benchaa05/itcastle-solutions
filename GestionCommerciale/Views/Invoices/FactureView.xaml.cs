@@ -5,21 +5,21 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using GestionCommerciale.DomainModel.Entities;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Editors;
 using DevExpress.Xpf.Grid;
 using DevExpress.Xpf.LayoutControl;
-using DevExpress.Xpf.Printing;
-using GestionCommerciale.Modals;
-using GestionCommerciale.Modals.TVA;
+using GestionCommerciale.Dialogs.Customer;
+using GestionCommerciale.Dialogs.Sale;
 using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Entities;
 using GestionCommerciale.DomainModel.Invoice;
 using GestionCommerciale.DomainModel.UseCases;
-using GestionCommerciale.DomainModel.Validator;
+using GestionCommerciale.Modals;
+using GestionCommerciale.Modals.TVA;
 
-namespace GestionCommerciale.Views.InvoiceFolder
+namespace GestionCommerciale.Views.Invoices
 {
 
     /// <summary>

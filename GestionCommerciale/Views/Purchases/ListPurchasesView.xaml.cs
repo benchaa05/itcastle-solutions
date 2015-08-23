@@ -5,16 +5,13 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
-using GestionCommerciale.DomainModel.Entities;
 using DevExpress.Xpf.Core;
-using GestionCommerciale.Helpers;
-
-using DevExpress.Xpf.Grid;
-using GestionCommerciale.Views.SaleFolder;
-using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Entities;
+using GestionCommerciale.Helpers;
+using GestionCommerciale.Views.SaleFolder;
 
-namespace GestionCommerciale.Views.PurchaseFolder
+namespace GestionCommerciale.Views.Purchases
 {
     /// <summary>
     /// Interaction logic for ListSuppliersView.xaml

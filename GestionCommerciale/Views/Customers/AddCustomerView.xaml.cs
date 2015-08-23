@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -7,11 +6,9 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.LayoutControl;
-using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
-using GestionCommerciale.DomainModel.Validator;
 
-namespace GestionCommerciale.Views.CustomerFolder
+namespace GestionCommerciale.Views.Customers
 {
     /// <summary>
     /// Interaction logic for AddCustomerView.xaml

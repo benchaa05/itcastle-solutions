@@ -1,19 +1,16 @@
 ﻿using System;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Media.Animation;
-using GestionCommerciale.DomainModel.Entities;
-using GestionCommerciale.DomainModel;
-using GestionCommerciale.DomainModel.Validator;
-using GestionCommerciale;
-using System.IO;
+using System.Windows.Media.Imaging;
 using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Entities;
+using GestionCommerciale.DomainModel.Validator;
 
-namespace GestionCommerciale.Views.EmployeeFolder
+namespace GestionCommerciale.Views.Employees
 {
     /// <summary>
     /// Interaction logic for AddEmployee.xaml

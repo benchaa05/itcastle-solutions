@@ -540,9 +540,7 @@
     <Resource Include="Images\Business_menu\nouveau.png" />
     <Resource Include="Images\Business_menu\statistique.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\TVAFolder\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\Business_menu\adresse.png" />
     <Resource Include="Images\Business_menu\book.png" />

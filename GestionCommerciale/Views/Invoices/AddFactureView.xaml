@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="GestionCommerciale.Views.InvoiceFolder.AddFactureView"
+    x:Class="GestionCommerciale.Views.Invoices.AddFactureView"
     Name="FactureControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

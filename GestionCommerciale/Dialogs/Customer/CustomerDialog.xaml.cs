@@ -13,7 +13,7 @@ using System.Windows.Shapes;
 using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
 
-namespace GestionCommerciale.Modals
+namespace GestionCommerciale.Dialogs.Customer
 {
     /// <summary>
     /// Interaction logic for TVADialog.xaml

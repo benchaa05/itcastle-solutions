@@ -1,4 +1,4 @@
-﻿<Window x:Class="GestionCommerciale.Views.TVAFolder.AddTvaView"
+﻿<Window x:Class="GestionCommerciale.Views.TVAs.AddTvaView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Ajouter une unité de mésure " Height="184" Width="435" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">

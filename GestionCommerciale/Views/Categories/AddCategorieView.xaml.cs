@@ -8,7 +8,7 @@ using GestionCommerciale.DomainModel.Validator;
 using System.IO;
 using DevExpress.Xpf.Core;
 using GestionCommerciale.DomainModel.ClassesClients;
-using GestionCommerciale.Views.ProductFolder;
+using GestionCommerciale.Views.Products;
 using Categorys = GestionCommerciale.DomainModel.Entities.Category;
 
 namespace GestionCommerciale.Views.CategoryFolder
@@ -96,7 +96,8 @@ namespace GestionCommerciale.Views.CategoryFolder
 
         private void AddCategoryView_OnClosed(object sender, EventArgs e)
         {
-            _addProductView?.LoadCategoryAndSubCategory();
+            if(_addProductView!=null)
+            _addProductView.LoadCategoryAndSubCategory();
         }
     }
 }

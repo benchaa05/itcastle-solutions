@@ -1,24 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using GestionCommerciale.DomainModel.Validator;
 using System.IO;
-using System.Diagnostics;
-using System.Drawing;
-using GestionCommerciale.DomainModel;
+using System.Windows;
+using System.Windows.Media.Imaging;
+using DevExpress.Xpf.Editors;
 using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.DomainModel.Entities;
-
+using GestionCommerciale.DomainModel.Validator;
 
 namespace GestionCommerciale.Views.Options
 {
@@ -27,7 +14,7 @@ namespace GestionCommerciale.Views.Options
     /// </summary>
     public partial class GeneralParams
     {
-        bool _passChanged = false;   
+        bool _passChanged = false;
         public GeneralParams()
         {
             InitializeComponent();
@@ -35,9 +22,9 @@ namespace GestionCommerciale.Views.Options
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            if (! WhoEmployee.IsAdministrator)
+            if (!WhoEmployee.IsAdministrator)
                 this.Visibility = Visibility.Hidden;
-           
+
             this.LoadSettingsIntoForm();
 
 
@@ -47,22 +34,22 @@ namespace GestionCommerciale.Views.Options
             SettingsClient sc = new SettingsClient();
             Setting settings = sc.GetSetting();
             if (settings == null) return;
-            
-                settings.DateMAJ = System.DateTime.Now;
-                PictureImg.EditValue = settings.Logo;
-                CompanyNameTxtBox.Text = settings.CompanyName;
-                AdresseTxtBox.Text = settings.Adresse;
-                ZipCodeTxtBox.Text = settings.PostalCode;
-                CityTxtBox.Text = settings.City;
-                FixTxtBox.Text = settings.Phone;
-                MobileTxtBox.Text = settings.MobPhone;
-                FaxTxtBox.Text = settings.Fax;
-                EmailTxtBox.Text = settings.Email;
-                RcTxtBox.Text = settings.RC;
-                NsTxtBox.Text = settings.NF;
-                NisTxtBox.Text = settings.NIS;
-                AiTxtBox.Text = settings.AI;
-                PasswordTxtBox.Text = "administrat";
+
+            settings.DateMAJ = DateTime.Now;
+            PictureImg.EditValue = settings.Logo;
+            CompanyNameTxtBox.Text = settings.CompanyName;
+            AdresseTxtBox.Text = settings.Adresse;
+            ZipCodeTxtBox.Text = settings.PostalCode;
+            CityTxtBox.Text = settings.City;
+            FixTxtBox.Text = settings.Phone;
+            MobileTxtBox.Text = settings.MobPhone;
+            FaxTxtBox.Text = settings.Fax;
+            EmailTxtBox.Text = settings.Email;
+            RcTxtBox.Text = settings.RC;
+            NsTxtBox.Text = settings.NF;
+            NisTxtBox.Text = settings.NIS;
+            AiTxtBox.Text = settings.AI;
+            PasswordTxtBox.Text = "administrat";
         }
 
         private void initSettings()
@@ -70,7 +57,7 @@ namespace GestionCommerciale.Views.Options
             MessageBox.Show("Vous Devez Remplir les paramètres pour un bon fonctionnement de l'application");
         }
 
-        
+
 
 
 
@@ -105,14 +92,15 @@ namespace GestionCommerciale.Views.Options
             settings.PostalCode = ZipCodeTxtBox.Text;
             settings.City = CityTxtBox.Text;
             settings.Phone = FixTxtBox.Text;
-            settings.MobPhone  = MobileTxtBox.Text;
+            settings.MobPhone = MobileTxtBox.Text;
             settings.Fax = FaxTxtBox.Text;
-            settings.Email  = EmailTxtBox.Text;
+            settings.Email = EmailTxtBox.Text;
             settings.RC = RcTxtBox.Text;
             settings.NF = NsTxtBox.Text;
             settings.NIS = NisTxtBox.Text;
             settings.AI = AiTxtBox.Text;
-            if (!String.IsNullOrEmpty(PasswordTxtBox.Text)) {
+            if (!String.IsNullOrEmpty(PasswordTxtBox.Text))
+            {
                 PasswordClient pc = new PasswordClient();
                 Password admin = pc.GetPassword("admin");
                 if (!PasswordTxtBox.Text.Equals("administrat")) admin.Password1 = PasswordClient.CryptePassword(PasswordTxtBox.Text);
@@ -120,14 +108,14 @@ namespace GestionCommerciale.Views.Options
                 pc.MajUser(admin);
                 admin = pc.GetPassword("admin");
             }
-            
+
             String s = SettingsClient.MajSettings(settings);
-            MessageBox.Show(s);             
+            MessageBox.Show(s);
         }
 
-        private void PictureImg_EditValueChanged(object sender, DevExpress.Xpf.Editors.EditValueChangedEventArgs e)
+        private void PictureImg_EditValueChanged(object sender, EditValueChangedEventArgs e)
         {
-            
+
         }
     }
 }

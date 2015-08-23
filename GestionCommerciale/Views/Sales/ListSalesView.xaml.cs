@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media.Animation;
-using GestionCommerciale.DomainModel.Entities;
 using DevExpress.Xpf.Grid;
-using GestionCommerciale.Helpers;
-using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Entities;
+using GestionCommerciale.Helpers;
 
-namespace GestionCommerciale.Views.SaleFolder
+namespace GestionCommerciale.Views.Sales
 {
     /// <summary>
     /// Interaction logic for ListSuppliersView.xaml

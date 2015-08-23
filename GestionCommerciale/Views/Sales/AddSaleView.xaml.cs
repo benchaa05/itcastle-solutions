@@ -4,24 +4,23 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using GestionCommerciale.DomainModel.Entities;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Grid;
 using DevExpress.Xpf.LayoutControl;
-using DevExpress.Xpf.Printing;
-using GestionCommerciale.Helpers;
-using GestionCommerciale.Views.CustomerFolder;
-using GestionCommerciale.Views.EmployeeFolder;
-using GestionCommerciale.Views.ProductFolder;
-using GestionCommerciale.Views.TVAFolder;
-using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Entities;
 using GestionCommerciale.DomainModel.UseCases;
 using GestionCommerciale.DomainModel.Validator;
+using GestionCommerciale.Helpers;
+using GestionCommerciale.DomainModel.UseCases;
+using GestionCommerciale.DomainModel.Validator;
+using GestionCommerciale.Views.Customers;
+using GestionCommerciale.Views.Employees;
+using GestionCommerciale.Views.Products;
+using GestionCommerciale.Views.TVAs;
 
 namespace GestionCommerciale.Views.SaleFolder
 {

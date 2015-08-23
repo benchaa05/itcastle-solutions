@@ -9,6 +9,8 @@ using DevExpress.Xpf.Editors;
 using DevExpress.Xpf.Grid;
 using DevExpress.Xpf.LayoutControl;
 using DevExpress.Xpf.Printing;
+using GestionCommerciale.Dialogs.Customer;
+using GestionCommerciale.Dialogs.Sale;
 using GestionCommerciale.Modals;
 using GestionCommerciale.Modals.TVA;
 using GestionCommerciale.DomainModel;
@@ -16,7 +18,7 @@ using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.DomainModel.UseCases;
 using GestionCommerciale.DomainModel.Validator;
 
-namespace GestionCommerciale.Views.InvoiceFolder
+namespace GestionCommerciale.Views.Invoices
 {
 
     /// <summary>

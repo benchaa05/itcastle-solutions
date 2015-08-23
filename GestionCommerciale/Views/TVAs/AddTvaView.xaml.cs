@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Windows;
-using GestionCommerciale.DomainModel.Entities;
-using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Entities;
 
-namespace GestionCommerciale.Views.TVAFolder
+namespace GestionCommerciale.Views.TVAs
 {
     /// <summary>
     /// Interaction logic for AddMesureView.xaml
@@ -44,3 +43,4 @@ namespace GestionCommerciale.Views.TVAFolder
         }
     }
 }
+

@@ -2,23 +2,24 @@
 using System.Windows.Controls;
 using DevExpress.Utils;
 using DevExpress.Xpf.Core;
-using GestionCommerciale.Views.CustomerFolder;
-using GestionCommerciale.Views.EmployeeFolder;
-using GestionCommerciale.Views.InvoiceFolder;
+using GestionCommerciale.Views.Customers;
+using GestionCommerciale.Views.Employees;
+using GestionCommerciale.Views.Invoices;
 using GestionCommerciale.Views.Options;
-using GestionCommerciale.Views.ProductFolder;
-using GestionCommerciale.Views.PurchaseFolder;
+using GestionCommerciale.Views.Products;
+using GestionCommerciale.Views.Purchases;
 using GestionCommerciale.Views.SaleFolder;
-using GestionCommerciale.Views.StatisticFolder;
-using GestionCommerciale.Views.StockFolder;
-using GestionCommerciale.Views.SupplierFolder;
+using GestionCommerciale.Views.Sales;
+using GestionCommerciale.Views.Statistics;
+using GestionCommerciale.Views.Stocks;
+using GestionCommerciale.Views.Suppliers;
 
 namespace GestionCommerciale.Helpers
 {
     public class TabHelper
     {
         private AddProductView _addProductView;
-        AddPurchaseView _addPurchaseView;
+        UserControl _addPurchaseView;
         AddSaleView _addSaleView;
         AddSupplierView _addSupplierView;
         AddCustomerView _addCustomerView;

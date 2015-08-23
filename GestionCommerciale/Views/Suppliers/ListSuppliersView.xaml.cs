@@ -4,19 +4,15 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Imaging;
-using System.Windows.Media.Animation;
-using GestionCommerciale.DomainModel.Entities;
-using GestionCommerciale.DomainModel;
-using GestionCommerciale.DomainModel.Validator;
-using System.IO;
 using System.Windows.Input;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
 using DevExpress.Xpf.Core;
-using DevExpress.Xpf.Grid;
 using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Entities;
 using GestionCommerciale.Helpers;
 
-namespace GestionCommerciale.Views.SupplierFolder
+namespace GestionCommerciale.Views.Suppliers
 {
     /// <summary>
     /// Interaction logic for ListSuppliersView.xaml
