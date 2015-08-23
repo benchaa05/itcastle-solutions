@@ -10,6 +10,7 @@ using GestionCommerciale.DomainModel.Entities;
 using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.Validator;
 using System.IO;
+using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.Helpers;
 
 namespace GestionCommerciale.Views.EmployeeFolder

@@ -13,6 +13,7 @@ using GestionCommerciale.Views.SaleFolder;
 using GestionCommerciale.Views.StatisticFolder;
 using GestionCommerciale.Views.SupplierFolder;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 
 namespace GestionCommerciale
 {

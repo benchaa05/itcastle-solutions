@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Input;
-using System.Windows.Media.Animation;
+using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.Helpers;
 using GestionCommerciale.Views.CustomerFolder;
 using GestionCommerciale.Views.EmployeeFolder;
 using GestionCommerciale.Views.InvoiceFolder;
-using GestionCommerciale.Views.Options;
 using GestionCommerciale.Views.ProductFolder;
 using GestionCommerciale.Views.PurchaseFolder;
 using GestionCommerciale.Views.SaleFolder;
-using GestionCommerciale.Views.StatisticFolder;
 using GestionCommerciale.Views.StockFolder;
 using GestionCommerciale.Views.SupplierFolder;
-using GestionCommerciale.DomainModel;
 using MahApps.Metro.Controls;
-using System.Windows.Controls;
+
 namespace GestionCommerciale
 {
-    public partial class MainWindow:MetroWindow
+    public partial class MainWindow
     {
         private TabHelper TabHlp;
       
@@ -120,6 +116,7 @@ namespace GestionCommerciale
             }
             catch (Exception)
             {
+                //
             }
             var item = TabHlp.AddNewTab(typeof(AddProductView), "Nouveau produit ", "FadeToLeftAnim");
            

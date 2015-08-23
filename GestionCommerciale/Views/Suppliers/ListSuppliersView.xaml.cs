@@ -13,6 +13,7 @@ using System.IO;
 using System.Windows.Input;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Grid;
+using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.Helpers;
 
 namespace GestionCommerciale.Views.SupplierFolder

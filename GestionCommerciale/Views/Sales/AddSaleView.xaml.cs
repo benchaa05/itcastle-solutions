@@ -19,6 +19,8 @@ using GestionCommerciale.Views.EmployeeFolder;
 using GestionCommerciale.Views.ProductFolder;
 using GestionCommerciale.Views.TVAFolder;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.UseCases;
 using GestionCommerciale.DomainModel.Validator;
 
 namespace GestionCommerciale.Views.SaleFolder

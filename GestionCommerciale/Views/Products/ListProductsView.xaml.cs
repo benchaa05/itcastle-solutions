@@ -15,6 +15,7 @@ using DevExpress.Xpf.Grid;
 using GestionCommerciale.Helpers;
 using GestionCommerciale.Views.CategoryFolder;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.DomainModel.Validator;
 
 namespace GestionCommerciale.Views.ProductFolder

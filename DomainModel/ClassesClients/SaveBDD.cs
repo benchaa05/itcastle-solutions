@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 
-namespace GestionCommerciale.DomainModel
+namespace GestionCommerciale.DomainModel.ClassesClients
 {
-    public class SaveBdd
+    public static class SaveBdd
     { public static void BackupBdd()
     {
         String defaultDirectory = Directory.GetCurrentDirectory();

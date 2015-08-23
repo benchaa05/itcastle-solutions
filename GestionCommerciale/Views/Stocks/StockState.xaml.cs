@@ -7,6 +7,7 @@ using GestionCommerciale.DomainModel.Entities;
 using DevExpress.Xpf.Charts;
 using DevExpress.Xpf.Editors;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 
 namespace GestionCommerciale.Views.StockFolder
 {

@@ -7,6 +7,7 @@ using GestionCommerciale.DomainModel.Entities;
 using DevExpress.Xpf.Grid;
 using GestionCommerciale.Helpers;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 
 namespace GestionCommerciale.Views.SaleFolder
 {

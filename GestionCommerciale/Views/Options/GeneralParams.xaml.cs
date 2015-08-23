@@ -16,6 +16,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Drawing;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.DomainModel.Entities;
 
 

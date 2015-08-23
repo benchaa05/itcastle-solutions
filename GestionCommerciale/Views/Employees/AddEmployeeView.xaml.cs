@@ -11,6 +11,7 @@ using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.Validator;
 using GestionCommerciale;
 using System.IO;
+using GestionCommerciale.DomainModel.ClassesClients;
 
 namespace GestionCommerciale.Views.EmployeeFolder
 {

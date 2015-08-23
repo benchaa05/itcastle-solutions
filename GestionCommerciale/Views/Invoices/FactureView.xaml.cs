@@ -14,6 +14,9 @@ using DevExpress.Xpf.Printing;
 using GestionCommerciale.Modals;
 using GestionCommerciale.Modals.TVA;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
+using GestionCommerciale.DomainModel.Invoice;
+using GestionCommerciale.DomainModel.UseCases;
 using GestionCommerciale.DomainModel.Validator;
 
 namespace GestionCommerciale.Views.InvoiceFolder

@@ -7,6 +7,7 @@ using GestionCommerciale.DomainModel;
 using GestionCommerciale.DomainModel.Validator;
 using System.IO;
 using DevExpress.Xpf.Core;
+using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.Views.ProductFolder;
 using Categorys = GestionCommerciale.DomainModel.Entities.Category;
 
@@ -84,7 +85,7 @@ namespace GestionCommerciale.Views.CategoryFolder
 
             try
             {
-                List<string> listCategorys = _CategorysClient.GetListCategoryName();
+                var listCategorys = _CategorysClient.GetListCategoryName();
                 CategoryNameCbx.ItemsSource = listCategorys;
             }
             catch (Exception)
@@ -95,11 +96,7 @@ namespace GestionCommerciale.Views.CategoryFolder
 
         private void AddCategoryView_OnClosed(object sender, EventArgs e)
         {
-
-            if (_addProductView != null)
-            {
-                _addProductView.LoadCategoryAndSubCategory();
-            }
+            _addProductView?.LoadCategoryAndSubCategory();
         }
     }
 }

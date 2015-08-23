@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Input;
 using GestionCommerciale.Views.ProductFolder;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 
 namespace GestionCommerciale.Views
 {

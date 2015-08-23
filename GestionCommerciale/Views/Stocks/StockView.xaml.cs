@@ -13,6 +13,7 @@ using DevExpress.Mvvm;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.Editors;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 using Application = System.Windows.Application;
 
 namespace GestionCommerciale.Views.StockFolder

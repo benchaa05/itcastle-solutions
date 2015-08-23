@@ -8,6 +8,7 @@ using System.Windows.Media.Animation;
 using GestionCommerciale.DomainModel.Entities;
 using DevExpress.Xpf.Charts;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 using GroupBox = DevExpress.Xpf.LayoutControl.GroupBox;
 
 namespace GestionCommerciale.Views.StatisticFolder

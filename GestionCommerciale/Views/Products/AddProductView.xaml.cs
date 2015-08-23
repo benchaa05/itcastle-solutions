@@ -9,6 +9,7 @@ using DevExpress.Xpf.Editors;
 using DevExpress.Xpf.LayoutControl;
 using GestionCommerciale.Views.CategoryFolder;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 using Categorys = GestionCommerciale.DomainModel.Entities.Category;
 
 namespace GestionCommerciale.Views.ProductFolder

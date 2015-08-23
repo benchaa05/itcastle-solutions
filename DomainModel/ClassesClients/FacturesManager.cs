@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.DomainModel.Entities;
+using GestionCommerciale.DomainModel.Invoice;
+using GestionCommerciale.DomainModel.UseCases;
 
 namespace GestionCommerciale.DomainModel
 {

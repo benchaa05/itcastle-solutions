@@ -8,6 +8,7 @@ using System.Windows.Media.Imaging;
 using DevExpress.Xpf.Core;
 using DevExpress.Xpf.LayoutControl;
 using GestionCommerciale.DomainModel;
+using GestionCommerciale.DomainModel.ClassesClients;
 using GestionCommerciale.DomainModel.Validator;
 
 namespace GestionCommerciale.Views.CustomerFolder
